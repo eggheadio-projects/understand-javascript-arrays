@@ -16,4 +16,15 @@ const newUsers = users.reduce((obj, user) => {
     return obj;
 }, {});
 
-console.log(newUsers['02'].name);
+console.log(newUsers['02'].name) || displayInPreview(newUsers['02'].name);
+
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}

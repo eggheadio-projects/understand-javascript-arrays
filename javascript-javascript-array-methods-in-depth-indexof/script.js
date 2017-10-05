@@ -20,4 +20,15 @@ var filtered = events.filter(event => {
   return whitelist.indexOf(ext) > -1;
 });
 
-console.log(filtered);
+console.log(filtered) || displayInPreview("css/core.css") || displayInPreview("js/app.js");
+
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}

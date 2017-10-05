@@ -21,5 +21,16 @@ var people2 = [
 
 people2.concat(people2)
   .forEach(function (person) {
-    console.log(person.name);
+    console.log(person.name) || displayInPreview(person.name);
   });
+
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}

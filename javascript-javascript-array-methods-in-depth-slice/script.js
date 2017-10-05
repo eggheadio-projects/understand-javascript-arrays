@@ -22,4 +22,15 @@ var output   = sections
         return prev;
     }, ref);
 
-console.log(output);
+console.log(output) || displayInPreview(output);
+
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}

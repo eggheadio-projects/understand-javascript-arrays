@@ -35,4 +35,17 @@ const filtered = lessons
 
 console.log(`<ul>
 ${filtered}
+</ul>`) || displayInPreview(`<ul>
+${filtered}
 </ul>`);
+
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}

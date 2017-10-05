@@ -20,5 +20,16 @@ function complete(x) {
 var isComplete = videos.every(complete);
 var completed = videos.filter(complete);
 
-console.log(isComplete);
-console.log(completed);
+console.log(isComplete) || displayInPreview(isComplete);
+console.log(completed) || displayInPreview(completed.length) || displayInPreview(completed.viewed);
+
+
+
+
+// display in plunker preview
+function displayInPreview(string) {
+  var newDiv = document.createElement("div"); 
+  var newContent = document.createTextNode(string); 
+  newDiv.appendChild(newContent);
+  document.body.appendChild(newDiv)
+}
