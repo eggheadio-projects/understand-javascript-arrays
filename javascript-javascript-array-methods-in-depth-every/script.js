@@ -21,7 +21,7 @@ var isComplete = videos.every(complete);
 var completed = videos.filter(complete);
 
 console.log(isComplete) || displayInPreview(isComplete);
-console.log(completed) || displayInPreview(completed.length) || displayInPreview(completed.viewed);
+console.log(completed) || displayInPreview("Array methods in depth: concact") || displayInPreview(completed.length);
 
 
 
