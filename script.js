@@ -20,7 +20,7 @@ var filtered = events.filter(event => {
   return whitelist.indexOf(ext) > -1;
 });
 
-console.log(filtered) || displayInPreview("css/core.css") || displayInPreview("js/app.js");
+console.log(filtered) || displayInPreview(filtered[0].file) || displayInPreview(filtered[1].file);
 
 
 
