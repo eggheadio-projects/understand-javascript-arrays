@@ -7,7 +7,7 @@ const items = [
         lastname: 'Osbourne'
     },
     {
-        active: true
+        active: true,
         firstname: 'Sally',
         lastname: 'Osbourne'
     },
@@ -22,15 +22,12 @@ const mapped = items
     .filter(x => x.active)
     .map(x => x.firstname);
 
-console.log(createHtmlList(mapped)) || displayInPreview(createHtmlList(mapped))
-
 function createHtmlList(items) {
-    const listElements = items.map(x => `<li>${x.firstname}</li>`)
-    return `<ul>\n\t${listElements}\n</ul>`;
+    const listElements = items.map(x => ` <li>${x}</li>`).join('');
+    return `<ul>${listElements}</ul>`;
 }
 
-
-
+console.log(createHtmlList(mapped)) || displayInPreview(createHtmlList(mapped))
 
 // display in plunker preview
 function displayInPreview(string) {
