@@ -20,16 +20,21 @@ function complete(x) {
 var isComplete = videos.every(complete);
 var completed = videos.filter(complete);
 
-console.log(isComplete) || displayInPreview(isComplete);
-console.log(completed) || displayInPreview(completed[0].title) || displayInPreview(completed[0].length) || displayInPreview(completed[0].viewed);
+console.log(isComplete)
+    || displayInPreview(isComplete);
+
+console.log(completed)
+    || displayInPreview(`title: ${completed[0].title}`)
+    || displayInPreview(`length: ${completed[0].length}`)
+    || displayInPreview(`viewed: ${completed[0].viewed}`);
 
 
 
 
 // display in plunker preview
 function displayInPreview(string) {
-  var newDiv = document.createElement("div"); 
-  var newContent = document.createTextNode(string); 
+  var newDiv = document.createElement("div");
+  var newContent = document.createTextNode(string);
   newDiv.appendChild(newContent);
   document.body.appendChild(newDiv)
 }
